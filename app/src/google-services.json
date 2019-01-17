@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "903094317603",
+    "firebase_url": "https://greenthumb-e24fc.firebaseio.com",
+    "project_id": "greenthumb-e24fc",
+    "storage_bucket": "greenthumb-e24fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903094317603:android:460ef458a52102b8",
+        "android_client_info": {
+          "package_name": "com.google.firebase.udacity.greenthumb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903094317603-ucots74i0kkk9ab31a6ce9ukr8iqvv35.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.google.firebase.udacity.greenthumb",
+            "certificate_hash": "0fb4a1c112c633c35e13a5d096220869016dd2fb"
+          }
+        },
+        {
+          "client_id": "903094317603-65k3vgp5bmh8o2174v9bdpid23h8v7g2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrNbwEWWguQ3SHeBs3Kh3nHadBHhtWad0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903094317603-65k3vgp5bmh8o2174v9bdpid23h8v7g2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
