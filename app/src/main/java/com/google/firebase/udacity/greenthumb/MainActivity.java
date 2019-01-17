@@ -13,7 +13,22 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package com.google.firebase.udacity.greenthumb;
+
+import android.content.DialogInterface;
+import android.database.Cursor;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DividerItemDecoration;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuItem;
+
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.udacity.greenthumb.data.Preferences;
+
 
 import android.content.DialogInterface;
 import android.database.Cursor;
@@ -39,6 +54,7 @@ import com.google.firebase.udacity.greenthumb.data.Preferences;
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private static final int PLANT_LOADER = 1;
+    private FirebaseAnalytics mFirebaseAnalytics;
 
     PlantAdapter mAdapter;
 
@@ -46,7 +62,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
+        // Obtain the FirebaseAnalytics instance.
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -131,6 +150,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                             return;
                         }
                         Preferences.setGardeningExperience(MainActivity.this, mRatingChoice);
+
+                        Analytics.setUserPropertyGardeningExperience(
+                                MainActivity.this, mRatingChoice);
                     }
                 })
                 .setNegativeButton(R.string.button_gardening_experience_cancel, new DialogInterface.OnClickListener() {
